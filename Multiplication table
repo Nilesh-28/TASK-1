@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+public class MultiplicationTable 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Step 1: Prompt the user to enter a number.
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Step 2: Prompt the user to enter another number to multiply with the first number.
+        System.out.print("Enter the range (up to 10) : ");
+        int range = scanner.nextInt();
+
+        // Step 3: Check if the range is above 10 and display an error message.
+        if (range > 10) 
+        {
+            System.out.println("Error: Range should be up to 10.");
+        } 
+        else 
+        {
+            // Step 6: Display the multiplication table
+            System.out.println("Multiplication Table of " + number + " (up to " + range + " multiply):");
+            for (int i = 1; i <= range; i++) 
+            {
+                int result = number * i;
+                System.out.println(number + " * " + i + " = " + result);
+            }
+        }
+        scanner.close();
+    }
+}
+
